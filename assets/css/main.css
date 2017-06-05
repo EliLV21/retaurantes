@@ -1,0 +1,11 @@
+#opciones{
+  text-align: center;
+}
+#map {
+  height: 400px;
+  width: 46%;
+  margin: 2%;
+}
+.opcionRestaurantes{
+  width: 32%;
+}
