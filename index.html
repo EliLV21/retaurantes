@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="assets/css/main.css">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Bubbler+One" rel="stylesheet">
   <link rel="stylesheet" href="assets\css\materialize.min.css">
   <title>Document</title>
 </head>
@@ -23,9 +24,9 @@
   <section class="row">
     <section class="col s6" id="map"></section>
     <section class="col s6" id="opciones">
-      <h3>Selecciona tu tipo de resturante</h3>
+      <h5>Selecciona tu tipo de resturante</h5>
       <div class="nav-wrapper">
-        <form>
+        <form id="search-form">
           <div class="input-field">
             <input id="search" type="search" required>
             <label class="label-icon" for="search"><i class="material-icons">search</i></label>
@@ -33,18 +34,66 @@
           </div>
         </form>
       </div>
-      <a href="#"><img class="opcionRestaurantes circle" src="assets/img/hamburguesa.png" alt=""></a>
-      <a href="#"><img class="opcionRestaurantes circle" src="assets/img/pizza.png" alt=""></a>
-      <a href="#"><img class="opcionRestaurantes circle" src="assets/img/taco.png" alt=""></a>
-    </section>
+      <img class="opcionRestaurantes circle" src="assets/img/hamburguesa.png" alt="">
+      <img class="opcionRestaurantes circle" src="assets/img/pizza.png" alt="">
+      <img class="opcionRestaurantes circle" src="assets/img/taco.png" alt="">
+      <ul class="collection">
+        <li class="collection-item avatar">
+         <img id="icono" class="circle" src="assets/img/img1.jpg">
+         <p data-latitud="19.4117916" data-longitud="-99.16786739999998" class="nombre restaurante">Kitchen 6</p>
+         <p class="direccion">Teotihuacan 14, Cuauhtemoc,Condesa, 06100</p>
+         <a href="#!" class="secondary-content"><i id="estrella" class="material-icons">grade</i></a>
+        </li>
+       </ul>
+       <ul class="collection">
+        <li class="collection-item avatar">
+          <img id="icono" class="circle" src="assets/img/img1.jpg">
+          <p data-latitud="19.4177437" data-longitud="-99.17081519999999" class="nombre restaurante">La Burguesa</p>
+          <p class="direccion">Calle Cozumel 67, Cuauhtémoc, Roma Norte</p>
+          <a href="#!" class="secondary-content"><i id="estrella" class="material-icons">grade</i></a>
+        </li>
+      </ul>
+      <ul class="collection">
+       <li class="collection-item avatar">
+         <img id="icono" class="circle" src="assets/img/img1.jpg">
+         <p data-latitud="19.4141603" data-longitud="-99.1733208" class="nombre restaurante">Tacos Don Juan</p>
+         <p class="direccion">Calle Juan Escutia 35, Cuauhtémoc, Condesa, 06140</p>
+         <a href="#!" class="secondary-content"><i id="estrella" class="material-icons">grade</i></a>
+       </li>
+      </ul>
+      <ul class="collection">
+        <li class="collection-item avatar">
+          <img id="icono" class="circle" src="assets/img/img1.jpg">
+          <p data-latitud="19.4182268" data-longitud="-99.15881969999998" class="nombre restaurante">Tacos Alvaro Obregon</p>
+          <p class="direccion">Av. Álvaro Obregón 90, Roma Norte, Roma Nte., 06700</p>
+          <a href="#!" class="secondary-content"><i id="estrella" class="material-icons">grade</i></a>
+        </li>
+      </ul>
+      <ul class="collection">
+       <li class="collection-item avatar">
+         <img id="icono" class="circle" src="assets/img/img1.jpg">
+         <p data-latitud="19.4198751" data-longitud="-99.16780319999998" class="nombre restaurante">Pizza Amore</p>
+         <p class="direccion">Calle Durango 209, Cuauhtémoc, Col. Roma Norte, Roma Nte., 06700</p>
+         <a href="#!" class="secondary-content"><i id="estrella" class="material-icons">grade</i></a>
+       </li>
+     </ul>
+     <ul class="collection">
+      <li class="collection-item avatar">
+        <img id="icono" class="circle" src="assets/img/img1.jpg">
+        <p data-latitud="19.4194514" data-longitud="-99.16780319999998" class="nombre restaurante">La Fabbrica Pizza Bar</p>
+        <p class="direccion">Plaza Villa de Madrid No.22, Cuauhtémoc, Roma Nte., 06700</p>
+        <a href="#!" class="secondary-content"><i id="estrella" class="material-icons">grade</i></a>
+      </li>
+    </ul>
   </section>
+  </section>
+  <script src="assets\js\jquery-3.2.1.min.js" charset="utf-8"></script>
 
-
-
-
-  <script src="C:\Users\Miriam\Desktop\Laboratoria\Sprint5\RutaRestaurantes\assets\css\materialize.min.css" charset="utf-8"></script>
-  <script src="Sprint5\RutaRestaurantes\assets\js\materialize.min.js" charset="utf-8"></script>
   <script src="assets\js\app.js" charset="utf-8"></script>
-  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCoRxLRtivwebgUbbqEuv1m1DjavKIYWw8&callback=initMap"></script>
+  <script src="assets\js\ubicacionRestaurantes.js" charset="utf-8"></script>
+  <!-- AIzaSyD9dE7eUmmRMlzilaT93S4wZqjtmu5sizg -->
+  <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD9dE7eUmmRMlzilaT93S4wZqjtmu5sizg">
+    </script>
 </body>
 </html>
