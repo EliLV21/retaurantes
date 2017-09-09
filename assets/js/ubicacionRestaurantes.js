@@ -41,29 +41,35 @@ var restaurantes = [
 var plantillaRestaurante = '<ul class="collection">' +
  '<li class="collection-item avatar" id="lista">' +
    '<img id="icono" class="circle" src="assets/img/img1.jpg">' +
-   '<p class="nombre">__nombre__</p>' +
+   '<p data-latitud="__lat__" data-longitud="__lng__" class="nombreLista">__nombre__</p>' +
    '<p class="direccion">__direccion__</p>' +
    '<a href="#!" class="secondary-content"><i id="estrella" class="material-icons">grade</i></a>'
  '</li>' +
-'</ul>'
+'</ul>';
 
 var cargarPagina =  function(){
   $("#search-form").submit(filtrarRestaurantes);
+  mostrarRestaurantes();
 };
+
 var filtrarRestaurantes = function (e) {
   e.preventDefault();
   var criterioBusqueda = $("#search").val().toLowerCase();
   var restaurantesFiltrados = restaurantes.filter(function(restaurantes){
-    return restaurantes.nombre.toLowerCase().indexOf(criterioBusqueda)>=0;
+    return restaurantes.nombre.toLowerCase().indexOf(criterioBusqueda) >= 0;
   });
   mostrarRestaurantes(restaurantesFiltrados);
 };
+
  var mostrarRestaurantes = function (restaurantes){
    var plantillaFinal = "";
    restaurantes.forEach(function(contacto){
      plantillaFinal += plantillaRestaurante.replace("__nombre__", restaurantes.nombre)
-     .replace("__direccion__", restaurantes.direccion);
+     .replace("__direccion__", restaurantes.direccion)
+	 .replace("__lat__", restaurantes.lat)
+	 .replace("__lng__", restaurantes.longitud);
    });
    $(".restaurantes").html(plantillaFinal);
+   $(".nombreLista").click(cambiarUbicacion);
  };
 $(document).ready(cargarPagina);

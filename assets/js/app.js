@@ -1,5 +1,5 @@
 $(document).ready(cargarPagina);
-// HOISTING
+
 function cargarPagina() {
   obtenerUbicacionActual();
   $(".restaurante").click(cambiarUbicacion);
@@ -11,7 +11,7 @@ function obtenerUbicacionActual() {
   } else {
     alert("Geolocalización no es soportado en tu navegador");
   }
-}
+};
 
 function mostrarPosicionActual(posicion) {
   var latitud = posicion.coords.latitude;
@@ -23,7 +23,7 @@ function mostrarPosicionActual(posicion) {
   };
 
   mostrarMapa(coordenadas);
-}
+};
 
 // @coordenadas: { lat: <number>, lng: <number> }
 function mostrarMapa(coordenadas) {
@@ -35,7 +35,7 @@ function mostrarMapa(coordenadas) {
     position: coordenadas,
     map: map
   });
-}
+};
 
 function cambiarUbicacion() {
   var latitud = $(this).data("latitud");
@@ -46,4 +46,4 @@ function cambiarUbicacion() {
     lng: longitud
   };
 
-}
+};
